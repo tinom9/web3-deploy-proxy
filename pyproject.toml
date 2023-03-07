@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "web3-deploy-proxy"
+version = "0.1.0"
+description = "Deploy contract with transparent upgradeable proxy schema"
+authors = ["Tino Martínez Molina <tino@martinezmolina.es>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+web3 = "^5.27.0"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^0.991"
+isort = "^5.11.3"
+black = "^22.12.0"
+pytest = "^7.2.1"
+
+[tool.mypy]
+python_version = "3.9"
+ignore_missing_imports = true
+
+[tool.isort]
+profile="black"
+
+[tool.black]
+line-length = 88
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
